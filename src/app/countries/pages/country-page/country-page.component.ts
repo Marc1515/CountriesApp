@@ -12,7 +12,7 @@ import { Country } from '../../interfaces/country';
 })
 export class CountryPageComponent implements OnInit {
 
-  public country?: Country;
+  public country?: Country[];
 
   constructor(private activatedRoute: ActivatedRoute,
               private router: Router,
