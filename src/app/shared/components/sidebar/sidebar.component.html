@@ -1,30 +1,32 @@
-<div class="row sidebar pt-4" [ngClass]="{'visible': !isSidebarVisible}">
+<div class="row sidebar" [ngClass]="{'visible': !isSidebarVisible}">
   <div class="col">
-    <ul class="list-group pt-5">
-      <li routerLink=""
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
-        class="list-group-item">
-        Home Page
-      </li>
+    <!-- <ul class="list-group pt-5"> -->
+      <!-- li class="list-group-item"> -->
+    <ul>
+        <li routerLink=""
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="">
+          Home Page
+        </li>
 
-      <li routerLink="countries/by-capital"
-        routerLinkActive="active"
-        class="list-group-item">
-        Por Capital
-      </li>
+        <li routerLink="countries/by-capital"
+          routerLinkActive="active"
+          class="">
+          Por Capital
+        </li>
 
-      <li routerLink="countries/by-country"
-        routerLinkActive="active"
-        class="list-group-item">
-        Por País
-      </li>
+        <li routerLink="countries/by-country"
+          routerLinkActive="active"
+          class="">
+          Por País
+        </li>
 
-      <li routerLink="countries/by-region"
-        routerLinkActive="active"
-        class="list-group-item">
-        Por Región
-      </li>
+        <li routerLink="countries/by-region"
+          routerLinkActive="active"
+          class="">
+          Por Región
+        </li>
     </ul>
   </div>
 </div>
