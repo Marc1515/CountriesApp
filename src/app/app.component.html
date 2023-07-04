@@ -1,14 +1,9 @@
-<div class="row mt-4">
-
-
-  <div class="col-3">
-    <!-- Sidebar -->
-    <shared-sidebar></shared-sidebar>
-  </div>
-
-  <div class="col">
-    <!-- Nuestras Páginas -->
-    <router-outlet></router-outlet>
-  </div>
+<div class="row">
+  <!-- Sidebar -->
+  <shared-sidebar></shared-sidebar>
+  <!-- Nuestras Páginas -->
+  <router-outlet class="d-flex justify-content-end pt-4">
+    <burguer-button></burguer-button>
+  </router-outlet>
 
 </div>
