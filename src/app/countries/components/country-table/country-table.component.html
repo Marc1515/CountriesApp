@@ -1,5 +1,6 @@
 <div *ngIf="countries.length === 0; else table" class="alert alert-warning text-center">
-  No hay países que mostrar
+  <p class="mb-2">No hay países que mostrar.</p>
+  <p>El nombre del país o capital debe buscarse en Inglés.</p>
 </div>
 
 <ng-template #table>
