@@ -1,0 +1,30 @@
+.btn-outline-custom {
+  color: #3F2305;
+  border-color: #DFD7BF;
+}
+
+
+
+.btn-outline-custom:active {
+  color: #3F2305;
+  background-color: #DFD7BF;
+  border-color: #DFD7BF;
+}
+
+
+.btn-outline-custom:focus, .btn-outline-custom.focus {
+  box-shadow: #DFD7BF;
+}
+
+.btn-outline-custom.disabled, .btn-outline-custom:disabled {
+  color: #3F2305;
+  background-color: transparent;
+}
+
+@media (min-width: 600px) {
+  .btn-outline-custom:hover {
+    color: #3F2305;
+    background-color: #DFD7BF;
+    border-color: #DFD7BF;
+  }
+}
