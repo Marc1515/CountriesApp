@@ -56,4 +56,8 @@ li:hover::after {
     height: 100%;
   }
 
+  li {
+    cursor: pointer;
+  }
+
 }
