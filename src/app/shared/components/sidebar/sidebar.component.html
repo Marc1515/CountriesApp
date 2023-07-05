@@ -6,25 +6,25 @@
         <li routerLink=""
           routerLinkActive="active"
           [routerLinkActiveOptions]="{ exact: true }"
-          class="">
+          (click)="sectionClicked()">
           Home Page
         </li>
 
         <li routerLink="countries/by-capital"
           routerLinkActive="active"
-          class="">
+          (click)="sectionClicked()">
           Por Capital
         </li>
 
         <li routerLink="countries/by-country"
           routerLinkActive="active"
-          class="">
+          (click)="sectionClicked()">
           Por País
         </li>
 
         <li routerLink="countries/by-region"
           routerLinkActive="active"
-          class="">
+          (click)="sectionClicked()">
           Por Región
         </li>
     </ul>

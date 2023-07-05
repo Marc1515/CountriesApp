@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { SharedSidebarService } from '../../services/shared-sidebar.service';
-import { Subscription } from 'rxjs';
+import { Subscription, delay, of } from 'rxjs';
 
 @Component({
   selector: 'shared-sidebar',
@@ -22,7 +22,17 @@ export class SidebarComponent implements OnInit, OnDestroy {
       } else {
         document.body.style.overflow = 'hidden';
       }
+
     });
+  }
+
+  sectionClicked() {
+    of(null).pipe(
+      delay(1000)
+    ).subscribe(() => {
+      this.sharedSidebarService.tagClicked.emit();
+      this.sharedSidebarService.sidebarToggled.emit();
+    })
   }
 
   ngOnDestroy() {
