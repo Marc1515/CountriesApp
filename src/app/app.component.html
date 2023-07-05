@@ -1,9 +1,17 @@
-<div class="row">
-  <!-- Sidebar -->
-  <shared-sidebar></shared-sidebar>
-  <!-- Nuestras Páginas -->
-  <router-outlet class="d-flex justify-content-end pt-4">
-    <burguer-button></burguer-button>
-  </router-outlet>
+<div class="container-fluid">
+  <div class="row">
 
+    <!-- Sidebar -->
+    <div class="container-sidebar">
+      <shared-sidebar class="sharedSidebar"></shared-sidebar>
+    </div>
+
+    <!-- Nuestras Páginas -->
+    <div class="allContent">
+      <router-outlet class="d-flex justify-content-end pt-4">
+        <burguer-button class="burguerButton"></burguer-button>
+      </router-outlet>
+    </div>
+
+  </div>
 </div>

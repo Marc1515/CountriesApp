@@ -1,4 +1,9 @@
-@media screen and (max-width: 600px) {
+
+img {
+  width: 40px;
+}
+
+@media screen and (max-width: 992px) {
   table, thead, tbody, th, td, tr {
     display: block;
   }

@@ -1,0 +1,24 @@
+
+@media (min-width: 992px) {
+  .row {
+    display: flex;
+  }
+
+  .container-sidebar {
+    position: relative;
+    width: 30%;
+    height: 100vh;
+    background-color: #F2EAD3;
+    display: block;
+  }
+
+  .allContent {
+    width: 70%;
+  }
+
+  .burguerButton {
+    display: none;
+  }
+
+}
+

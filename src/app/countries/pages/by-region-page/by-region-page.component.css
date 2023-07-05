@@ -21,7 +21,7 @@
   background-color: transparent;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 575px) {
   .btn-outline-custom:hover {
     color: #3F2305;
     background-color: #DFD7BF;

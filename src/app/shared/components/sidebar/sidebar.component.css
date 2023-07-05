@@ -4,7 +4,7 @@
   width: 100%;
   background-color: #F2EAD3;
   transition: transform 0.3s ease-in-out;
-  transform: translateX(-100%);
+  transform: translateX(-150%);
   z-index: 5;
   padding-top: 5rem;
 }
@@ -12,11 +12,6 @@
 
 .sidebar.visible {
   transform: translateX(0);
-}
-
-.no-scroll {
-  overflow: hidden;
-  position: fixed;
 }
 
 ul {
@@ -50,4 +45,15 @@ li::after {
 
 li:hover::after {
   left: 100%;
+}
+
+@media (min-width: 992px) {
+
+  .sidebar {
+    position: relative;
+    transform: translateX(0);
+    width: 100%;
+    height: 100%;
+  }
+
 }
