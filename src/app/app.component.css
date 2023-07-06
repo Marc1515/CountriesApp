@@ -6,18 +6,43 @@
 
   .container-sidebar {
     position: relative;
-    width: 30%;
+    width: 25%;
     height: 100vh;
-    background-color: #F2EAD3;
+    background-color: #EEEEEE;
     display: block;
+    padding: 0;
   }
 
   .allContent {
-    width: 70%;
+    width: 75%;
   }
 
   .burguerButton {
     display: none;
+  }
+
+}
+
+@media (min-width: 1200px) {
+
+  .container-sidebar {
+    width: 20%;
+  }
+
+  .allContent {
+    width: 80%;
+  }
+
+}
+
+@media (min-width: 1440px) {
+
+  .container-sidebar {
+    width: 15%;
+  }
+
+  .allContent {
+    width: 85%;
   }
 
 }
