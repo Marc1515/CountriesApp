@@ -1,30 +1,28 @@
 <div class="row sidebar" [ngClass]="{'visible': !isSidebarVisible}">
-  <div class="col">
-    <ul>
-        <li routerLink=""
-          routerLinkActive="active"
-          [routerLinkActiveOptions]="{ exact: true }"
-          (click)="sectionClicked()">
-          Home Page
-        </li>
+  <ul>
+      <li routerLink=""
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="sectionClicked()">
+        Home Page
+      </li>
 
-        <li routerLink="countries/by-capital"
-          routerLinkActive="active"
-          (click)="sectionClicked()">
-          Por Capital
-        </li>
+      <li routerLink="countries/by-capital"
+        routerLinkActive="active"
+        (click)="sectionClicked()">
+        Por Capital
+      </li>
 
-        <li routerLink="countries/by-country"
-          routerLinkActive="active"
-          (click)="sectionClicked()">
-          Por País
-        </li>
+      <li routerLink="countries/by-country"
+        routerLinkActive="active"
+        (click)="sectionClicked()">
+        Por País
+      </li>
 
-        <li routerLink="countries/by-region"
-          routerLinkActive="active"
-          (click)="sectionClicked()">
-          Por Región
-        </li>
-    </ul>
-  </div>
+      <li routerLink="countries/by-region"
+        routerLinkActive="active"
+        (click)="sectionClicked()">
+        Por Región
+      </li>
+  </ul>
 </div>

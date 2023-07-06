@@ -1,0 +1,42 @@
+h1, h3, p {
+  padding: 1rem;
+  padding-bottom: 2rem;
+}
+
+img {
+  width: 100%;
+}
+
+@media ( min-width: 768px ) {
+
+  h1 {
+    padding: 2rem;
+    padding-bottom: 4rem;
+  }
+
+  .img-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  img {
+    width: 60%;
+  }
+
+  h3 {
+    padding-top: 2rem;
+  }
+
+  p {
+    padding-right: 15rem;
+  }
+
+}
+
+@media ( min-width: 992px ) {
+
+  img {
+    width: 40%;
+  }
+
+}
