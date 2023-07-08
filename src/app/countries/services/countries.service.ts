@@ -55,15 +55,13 @@ export class CountriesService {
 
   searchCapital( term: string ): Observable<Country[]> {
     const url = `${this.apiUrl}/capital/${ term }`;
-    return this.getCountriesRequest(url, country => {
-      console.log(country);
-      return country.capital[0].toLowerCase().startsWith(term.toLowerCase());
-    })
-    .pipe(
-      tap( countries => this.cacheStore.byCapital = {term, countries} ),
-      tap( () => this.saveToLocalStorage() )
-    );
+    return this.getCountriesRequest(url, country => country.capital[0].toLowerCase().startsWith(term.toLowerCase()))
+      .pipe(
+        tap( countries => this.cacheStore.byCapital = {term, countries} ),
+        tap( () => this.saveToLocalStorage() )
+      );
   }
+
 
 
   searchCountry( term: string ): Observable<Country[]> {
