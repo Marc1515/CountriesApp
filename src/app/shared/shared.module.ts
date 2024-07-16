@@ -9,8 +9,6 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { BurguerButtonComponent } from './components/burguer-button/burguer-button.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
-
-
 @NgModule({
   declarations: [
     HomePageComponent,
@@ -20,16 +18,14 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     BurguerButtonComponent,
     NavbarComponent,
   ],
-  imports: [
-    CommonModule,
-    RouterModule
-  ],
+  imports: [CommonModule, RouterModule],
   exports: [
     HomePageComponent,
     LoadingSpinnerComponent,
     SearchBoxComponent,
     SidebarComponent,
-    BurguerButtonComponent
-  ]
+    BurguerButtonComponent,
+    NavbarComponent,
+  ],
 })
-export class SharedModule { }
+export class SharedModule {}

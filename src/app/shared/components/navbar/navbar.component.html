@@ -1,1 +1,37 @@
-<p>navbar works!</p>
+<nav class="navbar">
+  <ul class="navbar__list">
+    <li
+      class="navbar__item"
+      routerLink=""
+      routerLinkActive=""
+      [routerLinkActiveOptions]="{ exact: true }"
+      (click)="sectionClicked()"
+    >
+      Home
+    </li>
+    <li
+      class="navbar__item"
+      routerLink="countries/by-capital"
+      routerLinkActive=""
+      (click)="sectionClicked()"
+    >
+      By Capital
+    </li>
+    <li
+      class="navbar__item"
+      routerLink="countries/by-country"
+      routerLinkActive=""
+      (click)="sectionClicked()"
+    >
+      By Country
+    </li>
+    <li
+      class="navbar__item"
+      routerLink="countries/by-region"
+      routerLinkActive=""
+      (click)="sectionClicked()"
+    >
+      By Continent
+    </li>
+  </ul>
+</nav>
