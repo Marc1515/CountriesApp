@@ -7,6 +7,7 @@ import { LoadingSpinnerComponent } from './components/loading-spinner/loading-sp
 import { SearchBoxComponent } from './components/search-box/search-box.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { BurguerButtonComponent } from './components/burguer-button/burguer-button.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 
@@ -17,6 +18,7 @@ import { BurguerButtonComponent } from './components/burguer-button/burguer-butt
     SearchBoxComponent,
     SidebarComponent,
     BurguerButtonComponent,
+    NavbarComponent,
   ],
   imports: [
     CommonModule,
