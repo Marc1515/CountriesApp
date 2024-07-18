@@ -9,6 +9,9 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { BurguerButtonComponent } from './components/burguer-button/burguer-button.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
+// Angular Material
+import { MatButtonModule } from '@angular/material/button';
+
 @NgModule({
   declarations: [
     HomePageComponent,
@@ -18,7 +21,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     BurguerButtonComponent,
     NavbarComponent,
   ],
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, MatButtonModule],
   exports: [
     HomePageComponent,
     LoadingSpinnerComponent,
