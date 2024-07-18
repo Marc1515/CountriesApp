@@ -1,10 +1,9 @@
-
 @media (min-width: 992px) {
   .row {
     display: flex;
   }
 
-  .container__navbar{
+  .container__navbar {
     position: relative;
     display: block;
     width: 100%;
@@ -15,7 +14,7 @@
     position: relative;
     width: 25%;
     height: 100vh;
-    background-color: #EEEEEE;
+    background-color: #eeeeee;
     display: block;
     padding: 0;
   }
@@ -27,11 +26,9 @@
   .burguerButton {
     display: none;
   }
-
 }
 
 @media (min-width: 1200px) {
-
   .container-sidebar {
     width: 20%;
   }
@@ -39,18 +36,20 @@
   .allContent {
     width: 80%;
   }
-
 }
 
 @media (min-width: 1440px) {
+  .app__container {
 
-  .container-sidebar {
-    width: 15%;
+    padding: 2rem;
+    padding-top: 4rem;
+
+    .container-sidebar {
+      width: 15%;
+    }
+
+    .allContent {
+      width: 85%;
+    }
   }
-
-  .allContent {
-    width: 85%;
-  }
-
 }
-
