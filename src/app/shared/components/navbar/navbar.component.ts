@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { SharedSidebarService } from '../../services/shared-sidebar.service';
 import { delay, of, Subscription } from 'rxjs';
 
@@ -37,6 +37,23 @@ export class NavbarComponent {
   ngOnDestroy() {
     if (this.sidebarToggledSubscription) {
       this.sidebarToggledSubscription.unsubscribe();
+    }
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const navbar = document.querySelector('.navbar') as HTMLElement;
+    const navbarList = document.querySelector('.navbar__list') as HTMLElement;
+    const buttons = document.querySelectorAll('.navbar__item button');
+
+    if (window.pageYOffset > 100) {
+      navbar.classList.add('navbar--scrolled');
+      navbarList.classList.add('navbar__list--scrolled');
+      buttons.forEach((button) => button.classList.add('button--scrolled'));
+    } else {
+      navbar.classList.remove('navbar--scrolled');
+      navbarList.classList.remove('navbar__list--scrolled');
+      buttons.forEach((button) => button.classList.remove('button--scrolled'));
     }
   }
 }

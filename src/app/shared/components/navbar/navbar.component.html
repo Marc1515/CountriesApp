@@ -1,37 +1,24 @@
 <nav class="navbar">
   <ul class="navbar__list">
-    <li
-      class="navbar__item"
-      routerLink=""
-      routerLinkActive=""
-      [routerLinkActiveOptions]="{ exact: true }"
-      (click)="sectionClicked()"
-    >
-      Home
+    <li class="navbar__item">
+      <button mat-button routerLink="" routerLinkActive="" [routerLinkActiveOptions]="{ exact: true }" (click)="sectionClicked()">
+        Home
+      </button>
     </li>
-    <li
-      class="navbar__item"
-      routerLink="countries/by-capital"
-      routerLinkActive=""
-      (click)="sectionClicked()"
-    >
-      By Capital
+    <li class="navbar__item">
+      <button mat-button routerLink="countries/by-capital" routerLinkActive="" (click)="sectionClicked()">
+        By Capital
+      </button>
     </li>
-    <li
-      class="navbar__item"
-      routerLink="countries/by-country"
-      routerLinkActive=""
-      (click)="sectionClicked()"
-    >
-      By Country
+    <li class="navbar__item">
+      <button mat-button routerLink="countries/by-country" routerLinkActive="" (click)="sectionClicked()">
+        By Country
+      </button>
     </li>
-    <li
-      class="navbar__item"
-      routerLink="countries/by-region"
-      routerLinkActive=""
-      (click)="sectionClicked()"
-    >
-      By Continent
+    <li class="navbar__item">
+      <button mat-button routerLink="countries/by-region" routerLinkActive="" (click)="sectionClicked()">
+        By Continent
+      </button>
     </li>
   </ul>
 </nav>
