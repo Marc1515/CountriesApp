@@ -11,6 +11,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 
 // Angular Material
 import { MatButtonModule } from '@angular/material/button';
+import { SwitchButtonComponent } from './components/switch-button/switch-button.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { MatButtonModule } from '@angular/material/button';
     SidebarComponent,
     BurguerButtonComponent,
     NavbarComponent,
+    SwitchButtonComponent,
   ],
   imports: [CommonModule, RouterModule, MatButtonModule],
   exports: [
