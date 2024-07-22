@@ -1,1 +1,23 @@
-<p>country-cards works!</p>
+<div class="cards_container">
+  <div class="cards_card" *ngFor="let country of countries">
+    <div class="cards_img">
+      <img [src]="country.flags.svg" [alt]="country.name.common" />
+    </div>
+    <div class="cards_infoBox">
+      <ul>
+        <li>
+          <span class="cards_infoBox_titles">Nombre: </span
+          ><span>{{ country.name.common }}</span>
+        </li>
+        <li>
+          <span class="cards_infoBox_titles">Capital: </span
+          ><span>{{ country.capital }}</span>
+        </li>
+        <li>
+          <span class="cards_infoBox_titles">Población: </span
+          ><span>{{ country.population | number }}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
