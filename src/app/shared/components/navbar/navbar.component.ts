@@ -1,17 +1,23 @@
-import { Component, HostListener } from '@angular/core';
-import { SharedSidebarService } from '../../services/shared-sidebar.service';
-import { delay, of, Subscription } from 'rxjs';
+import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
+import { SharedNavbarService } from '../../services/shared-navbar.service';
+import { Subscription, of } from 'rxjs';
+import { delay } from 'rxjs/operators';
 
 @Component({
   selector: 'shared-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css'],
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit, OnDestroy {
   public isSidebarVisible: boolean = true;
+  public isSwitchToggled: boolean = false;
   private sidebarToggledSubscription!: Subscription;
+  private switchToggledSubscription!: Subscription;
 
-  constructor(private sharedSidebarService: SharedSidebarService) {}
+  constructor(
+    private sharedSidebarService: SharedNavbarService,
+    private sharedNavbarService: SharedNavbarService
+  ) {}
 
   ngOnInit() {
     this.sidebarToggledSubscription =
@@ -22,6 +28,12 @@ export class NavbarComponent {
         } else {
           document.body.style.overflow = 'hidden';
         }
+      });
+
+    this.switchToggledSubscription =
+      this.sharedNavbarService.switchToggled.subscribe((isToggled: boolean) => {
+        this.isSwitchToggled = isToggled;
+        console.log('Switch state in Navbar:', this.isSwitchToggled);
       });
   }
 
@@ -37,6 +49,9 @@ export class NavbarComponent {
   ngOnDestroy() {
     if (this.sidebarToggledSubscription) {
       this.sidebarToggledSubscription.unsubscribe();
+    }
+    if (this.switchToggledSubscription) {
+      this.switchToggledSubscription.unsubscribe();
     }
   }
 

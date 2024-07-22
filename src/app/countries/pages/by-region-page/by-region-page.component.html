@@ -1,19 +1,27 @@
+<!-- by-region-page.component.html -->
 <h2>Por Continente</h2>
 <hr>
 
 <div class="row">
   <div class="col text-center">
-    <button class="btn mx-2" *ngFor="let region of regions"
+    <button
+      class="btn mx-2"
+      *ngFor="let region of regions"
       (click)="searchByRegion(region)"
-      [ngClass]="{'btn-outline-custom': selectedRegion === region}"
+      [ngClass]="{ 'btn-outline-custom': selectedRegion === region }"
     >
-      {{region}}
+      {{ region }}
     </button>
   </div>
 </div>
 <div class="row">
   <div class="col">
-    <hr>
-      <countries-table [countries]="countries" ></countries-table>
+    <hr />
+    <ng-container *ngIf="isSwitchToggled; else showTable">
+      <countries-table [countries]="countries"></countries-table>
+    </ng-container>
+    <ng-template #showTable>
+      <country-cards [countries]="countries"></country-cards>
+    </ng-template>
   </div>
 </div>
