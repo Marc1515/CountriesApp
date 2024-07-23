@@ -10,7 +10,7 @@
 
 .cards_card {
   width: 15rem;
-  height: 22rem;
+  height: 18rem;
   border: 1px solid #000;
   border-radius: 5px;
   cursor: pointer;
@@ -22,7 +22,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 12rem;
+  height: 8rem;
 }
 
 .cards_img img {
