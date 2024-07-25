@@ -20,6 +20,7 @@ export class ByRegionPageComponent implements OnInit, OnDestroy {
     'Europe',
     'Oceania',
   ];
+  public test: any;
   public selectedRegion?: Region;
   public isSwitchToggled: boolean = false;
   private switchToggledSubscription!: Subscription;
@@ -32,14 +33,15 @@ export class ByRegionPageComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.countries = this.countriesService.cacheStore.byRegion.countries;
     this.selectedRegion = this.countriesService.cacheStore.byRegion.region;
+    this.test = this.countriesService.cacheStore.byRegion;
+
+    // Inicializa el estado local con el estado global
+    this.isSwitchToggled = this.sharedNavbarService.isSwitchToggled;
 
     this.switchToggledSubscription =
       this.sharedNavbarService.switchToggled.subscribe((isToggled: boolean) => {
         this.isSwitchToggled = isToggled;
-        console.log(
-          'ByRegionPageComponent switch state:',
-          this.isSwitchToggled
-        );
+        console.log('TEST:', this.test);
       });
   }
 

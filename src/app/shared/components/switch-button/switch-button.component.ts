@@ -7,13 +7,9 @@ import { SharedNavbarService } from '../../services/shared-navbar.service';
   styleUrls: ['./switch-button.component.css'],
 })
 export class SwitchButtonComponent {
-  public isToggled: boolean = false;
-
   constructor(private sharedNavbarService: SharedNavbarService) {}
 
   toggleSwitch() {
-    this.isToggled = !this.isToggled;
-    console.log('Switch toggled:', this.isToggled);
-    this.sharedNavbarService.switchToggled.emit(this.isToggled);
+    this.sharedNavbarService.toggleSwitch();
   }
 }
