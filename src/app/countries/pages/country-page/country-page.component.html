@@ -43,6 +43,16 @@
 
   <div class="row mt-2">
     <div class="col">
+      <h3>Mapa</h3>
+      <app-country-map
+        [lat]="country[0].latlng[0]"
+        [lng]="country[0].latlng[1]"
+      ></app-country-map>
+    </div>
+  </div>
+
+  <div class="row mt-2">
+    <div class="col">
       <h3>Traducciones</h3>
       <div class="d-flex flex-wrap">
         <span class="badge bg-primary m-1">{{
