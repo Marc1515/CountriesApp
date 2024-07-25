@@ -14,22 +14,9 @@ export class NavbarComponent implements OnInit, OnDestroy {
   private sidebarToggledSubscription!: Subscription;
   private switchToggledSubscription!: Subscription;
 
-  constructor(
-    private sharedSidebarService: SharedNavbarService,
-    private sharedNavbarService: SharedNavbarService
-  ) {}
+  constructor(private sharedNavbarService: SharedNavbarService) {}
 
   ngOnInit() {
-    this.sidebarToggledSubscription =
-      this.sharedSidebarService.sidebarToggled.subscribe((isOpen: boolean) => {
-        this.isSidebarVisible = !isOpen;
-        if (this.isSidebarVisible) {
-          document.body.style.overflow = 'auto';
-        } else {
-          document.body.style.overflow = 'hidden';
-        }
-      });
-
     this.switchToggledSubscription =
       this.sharedNavbarService.switchToggled.subscribe((isToggled: boolean) => {
         this.isSwitchToggled = isToggled;
@@ -41,8 +28,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
     of(null)
       .pipe(delay(1000))
       .subscribe(() => {
-        this.sharedSidebarService.tagClicked.emit();
-        this.sharedSidebarService.sidebarToggled.emit();
+        this.sharedNavbarService.tagClicked.emit();
       });
   }
 
