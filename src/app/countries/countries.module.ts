@@ -11,8 +11,7 @@ import { SharedModule } from '../shared/shared.module';
 import { CountryTableComponent } from './components/country-table/country-table.component';
 import { CountryCardsComponent } from './components/country-cards/country-cards.component';
 import { CountryMapComponent } from './components/country-map/country-map.component';
-
-
+import { SwitchButtonComponent } from '../shared/components/switch-button/switch-button.component';
 
 @NgModule({
   declarations: [
@@ -22,12 +21,9 @@ import { CountryMapComponent } from './components/country-map/country-map.compon
     CountryPageComponent,
     CountryTableComponent,
     CountryCardsComponent,
-    CountryMapComponent
+    CountryMapComponent,
+    SwitchButtonComponent,
   ],
-  imports: [
-    CommonModule,
-    CountriesRoutingModule,
-    SharedModule,
-  ]
+  imports: [CommonModule, CountriesRoutingModule, SharedModule],
 })
-export class CountriesModule { }
+export class CountriesModule {}

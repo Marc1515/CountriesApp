@@ -9,7 +9,7 @@
 }
 
 .cards_card {
-  box-sizing: border-box; /* Añadir esta línea */
+  box-sizing: border-box;
   width: 8rem;
   height: 5rem;
   border: 3px solid #000;

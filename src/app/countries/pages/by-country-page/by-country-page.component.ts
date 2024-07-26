@@ -7,7 +7,7 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-by-country-page',
   templateUrl: './by-country-page.component.html',
-  styles: [],
+  styleUrls: ['by-country-page.component.css'],
 })
 export class ByCountryPageComponent implements OnInit, OnDestroy {
   public countries: Country[] = [];

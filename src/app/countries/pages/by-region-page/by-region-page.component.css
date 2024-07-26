@@ -2,6 +2,12 @@
   top: 0;
   left: 0;
   padding-top: 2rem;
+
+  .region-title-toggle__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .region-buttons__container {
     display: flex;
     flex-flow: row wrap;
