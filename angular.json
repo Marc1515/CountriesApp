@@ -24,7 +24,8 @@
               "node_modules/@fortawesome/fontawesome-free/css/all.css",
               "node_modules/mapbox-gl/dist/mapbox-gl.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "allowedCommonJsDependencies": ["vanilla-tilt"]
           },
           "configurations": {
             "production": {
