@@ -1,20 +1,18 @@
-<div class="country-title-toggle__container">
-  <h2>Por Pais</h2>
-  <app-switch-button></app-switch-button>
-</div>
-<hr />
+<div class="country-section__container">
+  <div class="country-title-toggle__container">
+    <h2>Por Pais</h2>
+    <app-switch-button></app-switch-button>
+  </div>
+  <hr />
 
-<div class="row">
-  <div class="col">
+  <div class="country-search__container">
     <shared-search-box
       (onDebounce)="searchByCountry($event)"
       [initialValue]="initialValue"
       placeholder="Buscar por país"
     ></shared-search-box>
   </div>
-</div>
-<div class="row">
-  <div class="col">
+  <div class="country-content__container">
     <hr />
     <shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>
     <ng-container *ngIf="isSwitchToggled; else showTable">

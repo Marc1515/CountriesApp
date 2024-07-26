@@ -1,4 +1,19 @@
-.capital-title-toggle__container {
-  display: flex;
-  justify-content: space-between;
+.capital-section__container {
+  top: 0;
+  left: 0;
+  padding-top: 2rem;
+
+  .capital-title-toggle__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .capital-search__container {
+    width: 100%;
+  }
+
+  .capital-title-toggle__container {
+    display: flex;
+    justify-content: space-between;
+  }
 }
