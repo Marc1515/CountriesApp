@@ -1,18 +1,17 @@
 <div class="app__container">
-  <div class="row">
+  <!-- Navbar -->
+  <div *ngIf="isScreenLarge" class="container__navbar">
+    <shared-navbar></shared-navbar>
+  </div>
 
-    <!-- Navbar -->
+  <div *ngIf="!isScreenLarge" class="container__sidebar">
+    <shared-sidebar></shared-sidebar>
+  </div>
 
-    <div class="container__navbar">
-      <shared-navbar></shared-navbar>
-    </div>
-
-    <!-- Nuestras Páginas -->
-    <div class="allContent">
-      <router-outlet class="d-flex justify-content-end pt-4">
-        <burguer-button class="burguerButton"></burguer-button>
-      </router-outlet>
-    </div>
-
+  <!-- Nuestras Páginas -->
+  <div class="container__content">
+    <router-outlet class="burguer-button__container">
+      <burguer-button class="burguer-button__button"></burguer-button>
+    </router-outlet>
   </div>
 </div>
