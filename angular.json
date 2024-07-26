@@ -25,7 +25,7 @@
               "node_modules/mapbox-gl/dist/mapbox-gl.css"
             ],
             "scripts": [],
-            "allowedCommonJsDependencies": ["vanilla-tilt"]
+            "allowedCommonJsDependencies": ["vanilla-tilt", "mapbox-gl"]
           },
           "configurations": {
             "production": {
