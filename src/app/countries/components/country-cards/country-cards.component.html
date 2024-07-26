@@ -8,21 +8,23 @@
     <div class="cards_img">
       <img [src]="country.flags.svg" [alt]="country.name.common" />
     </div>
-    <div class="cards_infoBox">
+    <!--     <div class="cards_infoBox">
       <ul>
         <li>
           <span class="cards_infoBox_titles">Nombre: </span>
-          <span>{{ country.name.common }}</span>
+          <span class="cards_infoBox_value">{{ country.name.common }}</span>
         </li>
         <li>
           <span class="cards_infoBox_titles">Capital: </span>
-          <span>{{ country.capital }}</span>
+          <span class="cards_infoBox_value">{{ country.capital }}</span>
         </li>
         <li>
           <span class="cards_infoBox_titles">Población: </span>
-          <span>{{ country.population | number }}</span>
+          <span class="cards_infoBox_value">{{
+            country.population | number
+          }}</span>
         </li>
       </ul>
-    </div>
+    </div> -->
   </a>
 </div>

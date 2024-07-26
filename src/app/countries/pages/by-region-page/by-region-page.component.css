@@ -1,22 +1,32 @@
-.btn-outline-custom {
-  color: #000000;
-  border-color: #068FFF;
+.region-section__container {
+  top: 0;
+  left: 0;
+  padding-top: 2rem;
+  .region-buttons__container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
 }
 
-
+.btn-outline-custom {
+  color: #000000;
+  border-color: #068fff;
+}
 
 .btn-outline-custom:active {
   color: #fff;
-  background-color: #068FFF;
-  border-color: #068FFF;
+  background-color: #068fff;
+  border-color: #068fff;
 }
 
-
-.btn-outline-custom:focus, .btn-outline-custom.focus {
-  box-shadow: #068FFF;
+.btn-outline-custom:focus,
+.btn-outline-custom.focus {
+  box-shadow: #068fff;
 }
 
-.btn-outline-custom.disabled, .btn-outline-custom:disabled {
+.btn-outline-custom.disabled,
+.btn-outline-custom:disabled {
   color: #fff;
   background-color: transparent;
 }
@@ -24,7 +34,7 @@
 @media (min-width: 575px) {
   .btn-outline-custom:hover {
     color: #fff;
-    background-color: #068FFF;
-    border-color: #068FFF;
+    background-color: #068fff;
+    border-color: #068fff;
   }
 }

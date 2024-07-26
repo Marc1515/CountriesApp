@@ -9,9 +9,10 @@
 }
 
 .cards_card {
-  width: 15rem;
-  height: 18rem;
-  border: 1px solid #000;
+  box-sizing: border-box; /* Añadir esta línea */
+  width: 8rem;
+  height: 5rem;
+  border: 3px solid #000;
   border-radius: 5px;
   cursor: pointer;
   transition: transform 0.1s;
@@ -23,7 +24,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 8rem;
+  height: 4.7rem;
 }
 
 .cards_img img {
@@ -44,9 +45,14 @@
 .cards_infoBox ul {
   display: flex;
   flex-flow: column nowrap;
-  gap: 0.5rem;
+  gap: 0.1rem;
 }
 
 .cards_infoBox_titles {
   font-weight: bold;
+  font-size: xx-small;
+}
+
+.cards_infoBox_value {
+  font-size: xx-small;
 }
