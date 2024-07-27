@@ -9,6 +9,7 @@ import {
 } from '@angular/core';
 import { Country } from '../../interfaces/country';
 import VanillaTilt from 'vanilla-tilt';
+import ScrollReveal from 'scrollreveal';
 
 @Component({
   selector: 'country-cards',
@@ -42,6 +43,18 @@ export class CountryCardsComponent implements AfterViewInit {
         speed: 400,
         glare: true,
         'max-glare': 0.5,
+      });
+
+      // Generar un retraso aleatorio entre 0 y 500ms
+      const randomDelay = Math.floor(Math.random() * 500);
+
+      ScrollReveal().reveal(card.nativeElement, {
+        distance: '50px',
+        duration: 800,
+        easing: 'ease-in-out',
+        origin: 'bottom',
+        reset: false,
+        delay: randomDelay,
       });
     });
   }
