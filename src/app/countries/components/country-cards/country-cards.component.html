@@ -8,7 +8,7 @@
     <div class="cards_img">
       <img [src]="country.flags.svg" [alt]="country.name.common" />
     </div>
-    <!--     <div class="cards_infoBox">
+    <div *ngIf="isLargeScreen" class="cards_infoBox">
       <ul>
         <li>
           <span class="cards_infoBox_titles">Nombre: </span>
@@ -25,6 +25,6 @@
           }}</span>
         </li>
       </ul>
-    </div> -->
+    </div>
   </a>
 </div>

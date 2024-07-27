@@ -18,6 +18,7 @@ import ScrollReveal from 'scrollreveal';
 })
 export class CountryCardsComponent implements AfterViewInit {
   showButton = false;
+  isLargeScreen = window.innerWidth > 765;
 
   @Input()
   public countries: Country[] = [];
@@ -27,6 +28,11 @@ export class CountryCardsComponent implements AfterViewInit {
   @HostListener('window:scroll', [])
   onWindowScroll() {
     this.showButton = window.pageYOffset > 100;
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    this.isLargeScreen = window.innerWidth > 765;
   }
 
   scrollToTop() {
