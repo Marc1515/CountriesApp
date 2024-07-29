@@ -8,53 +8,56 @@
       <strong>{{ country[0].name.common }}</strong>
     </h2>
   </div>
-
-  <div class="country-page__img-container">
-    <img
-      [src]="country[0].flags.svg"
-      [alt]="country[0].name.common"
-      class="img-thumbnail"
-    />
-  </div>
-  <div class="country-page__info-container">
-    <h3>Information</h3>
-    <ul class="country-page__list">
-      <li class="list-group-item">
-        <span class="country-page__item-title">Continent: </span>
-        <span class="country-page__item-value">{{ country[0].region }} </span>
-      </li>
-      <li class="list-group-item">
-        <span class="country-page__item-title">Capital: </span>
-        <span class="country-page__item-value">{{ country[0].capital }} </span>
-      </li>
-      <li class="list-group-item">
-        <span class="country-page__item-title">Language: </span>
-        <span class="country-page__item-value">
-          {{ getFirstLanguage(country[0].languages) }}
-        </span>
-      </li>
-      <li class="country-page__item">
-        <span class="country-page__item-title">Divisa: </span>
-        <span class="country-page__item-value">
-          {{ getFirstCurrency(country[0].currencies) }}
-        </span>
-      </li>
-      <li class="country-page__item">
-        <span class="country-page__item-title">Population: </span>
-        <span class="country-page__item-value">
-          {{ country[0].population | number }}
-        </span>
-      </li>
-      <li class="list-group-item">
-        <a
-          class="country-page__item-maps-link"
-          [href]="country[0].maps.googleMaps"
-          target="_blank"
-        >
-          <span>See on Google Maps..</span>
-        </a>
-      </li>
-    </ul>
+  <div class="country-page_flag-info-wrapper">
+    <div class="country-page__img-container">
+      <img
+        [src]="country[0].flags.svg"
+        [alt]="country[0].name.common"
+        class="img-thumbnail"
+      />
+    </div>
+    <div class="country-page__info-container">
+      <h3>Information</h3>
+      <ul class="country-page__list">
+        <li class="list-group-item">
+          <span class="country-page__item-title">Continent: </span>
+          <span class="country-page__item-value">{{ country[0].region }} </span>
+        </li>
+        <li class="list-group-item">
+          <span class="country-page__item-title">Capital: </span>
+          <span class="country-page__item-value"
+            >{{ country[0].capital }}
+          </span>
+        </li>
+        <li class="list-group-item">
+          <span class="country-page__item-title">Language: </span>
+          <span class="country-page__item-value">
+            {{ getFirstLanguage(country[0].languages) }}
+          </span>
+        </li>
+        <li class="country-page__item">
+          <span class="country-page__item-title">Divisa: </span>
+          <span class="country-page__item-value">
+            {{ getFirstCurrency(country[0].currencies) }}
+          </span>
+        </li>
+        <li class="country-page__item">
+          <span class="country-page__item-title">Population: </span>
+          <span class="country-page__item-value">
+            {{ country[0].population | number }}
+          </span>
+        </li>
+        <li class="list-group-item">
+          <a
+            class="country-page__item-maps-link"
+            [href]="country[0].maps.googleMaps"
+            target="_blank"
+          >
+            <span>See on Google Maps..</span>
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 
   <div class="country-page__map-container">
