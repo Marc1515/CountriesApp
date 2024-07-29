@@ -10,8 +10,13 @@
 
   <!-- Nuestras Páginas -->
   <div class="container__content">
-    <router-outlet class="burguer-button__container">
-      <burguer-button class="burguer-button__button"></burguer-button>
-    </router-outlet>
+    <div class="wrapper__content">
+      <router-outlet class="all-content">
+        <burguer-button
+          *ngIf="!isScreenLarge"
+          class="burguer-button__button"
+        ></burguer-button>
+      </router-outlet>
+    </div>
   </div>
 </div>

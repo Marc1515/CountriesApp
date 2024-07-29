@@ -17,21 +17,33 @@
     />
   </div>
   <div class="country-page__info-container">
-    <h3>Información</h3>
+    <h3>Information</h3>
     <ul class="country-page__list">
-      <li class="country-page__item">
-        <span class="country-page__item-title">Población: </span>
-        <span class="country-page__item-value"
-          >{{ country[0].population | number }}
-        </span>
+      <li class="list-group-item">
+        <span class="country-page__item-title">Continent: </span>
+        <span class="country-page__item-value">{{ country[0].region }} </span>
       </li>
       <li class="list-group-item">
         <span class="country-page__item-title">Capital: </span>
         <span class="country-page__item-value">{{ country[0].capital }} </span>
       </li>
       <li class="list-group-item">
-        <span class="country-page__item-title">Código: </span>
-        <span class="country-page__item-value">{{ country[0].cca3 }} </span>
+        <span class="country-page__item-title">Language: </span>
+        <span class="country-page__item-value">
+          {{ getFirstLanguage(country[0].languages) }}
+        </span>
+      </li>
+      <li class="country-page__item">
+        <span class="country-page__item-title">Divisa: </span>
+        <span class="country-page__item-value">
+          {{ getFirstCurrency(country[0].currencies) }}
+        </span>
+      </li>
+      <li class="country-page__item">
+        <span class="country-page__item-title">Population: </span>
+        <span class="country-page__item-value">
+          {{ country[0].population | number }}
+        </span>
       </li>
       <li class="list-group-item">
         <a
@@ -39,14 +51,14 @@
           [href]="country[0].maps.googleMaps"
           target="_blank"
         >
-          <span>Ver en Google Maps..</span>
+          <span>See on Google Maps..</span>
         </a>
       </li>
     </ul>
   </div>
 
   <div class="country-page__map-container">
-    <h3 class="country-page__map-title">Mapa</h3>
+    <h3 class="country-page__map-title">Map</h3>
     <app-country-map
       [lat]="country[0].latlng[0]"
       [lng]="country[0].latlng[1]"
@@ -54,7 +66,7 @@
   </div>
 
   <div class="country-page__translations-container">
-    <h3>Traducciones</h3>
+    <h3>Translatios</h3>
     <div class="country-page__translations-wrapper">
       <span class="badge bg-primary m-1">{{
         country[0].translations["ara"].common

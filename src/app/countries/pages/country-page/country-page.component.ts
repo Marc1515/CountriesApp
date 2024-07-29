@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CountriesService } from '../../services/countries.service';
 import { switchMap } from 'rxjs';
-import { Country } from '../../interfaces/country';
+import { Country, Languages, Currencies } from '../../interfaces/country';
 
 @Component({
   selector: 'app-country-page',
@@ -32,6 +32,16 @@ export class CountryPageComponent implements OnInit {
           this.country = country;
         }
       });
+  }
+
+  getFirstLanguage(languages: Languages): string {
+    const languageKeys = Object.keys(languages);
+    return languageKeys.length > 0 ? languages[languageKeys[0]] || '' : '';
+  }
+
+  getFirstCurrency(currencies: Currencies): string {
+    const currencyKeys = Object.keys(currencies);
+    return currencyKeys.length > 0 ? currencies[currencyKeys[0]].name : '';
   }
 
   searchCountry(code: string) {
