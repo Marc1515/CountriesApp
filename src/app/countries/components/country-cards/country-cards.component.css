@@ -12,6 +12,7 @@
   box-sizing: border-box;
   width: 8rem;
   height: 5rem;
+  background-color: var(--secondary-color);
   border: 3px solid #000;
   border-radius: 5px;
   cursor: pointer;
@@ -64,10 +65,12 @@
   .cards_infoBox_titles {
     font-weight: bold;
     font-size: x-small;
+    color: var(--text-color);
   }
 
   .cards_infoBox_value {
     font-size: x-small;
+    color: var(--text-color);
   }
 }
 

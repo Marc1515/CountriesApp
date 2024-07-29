@@ -1,6 +1,13 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap");
 
+:root {
+  --primary-color: #1b262c;
+  --secondary-color: #3282b8;
+  --background-color: #0f4c75;
+  --text-color: #bbe1fa;
+}
+
 html,
 body,
 div,
@@ -88,7 +95,7 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  color: #3f2305;
+  color: var(--text-color);
 }
 article,
 aside,

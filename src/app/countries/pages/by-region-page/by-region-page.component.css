@@ -12,6 +12,9 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    button {
+      color: var(--text-color);
+    }
   }
 }
 
