@@ -3,8 +3,8 @@
     *ngIf="countries.length === 0; else cards"
     class="alert alert-warning text-center"
   >
-    <p class="mb-2">No hay países que mostrar.</p>
-    <p>El nombre del país o capital debe buscarse en Inglés.</p>
+    <p class="mb-2">There are no countries to show.</p>
+    <p>The name of the country or capital should be searched in English.</p>
   </div>
   <ng-template #cards>
     <a
@@ -19,7 +19,7 @@
       <div *ngIf="isLargeScreen" class="cards_infoBox">
         <ul>
           <li>
-            <span class="cards_infoBox_titles">Nombre: </span>
+            <span class="cards_infoBox_titles">Name: </span>
             <span class="cards_infoBox_value">{{ country.name.common }}</span>
           </li>
           <li>
@@ -27,7 +27,7 @@
             <span class="cards_infoBox_value">{{ country.capital }}</span>
           </li>
           <li>
-            <span class="cards_infoBox_titles">Población: </span>
+            <span class="cards_infoBox_titles">Population: </span>
             <span class="cards_infoBox_value">{{
               country.population | number
             }}</span>
