@@ -7,7 +7,7 @@
   width: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(6, 143, 255, 0.99);
+  background-color: var(--primary-color);
   transition: transform 0.3s ease-in-out;
   transform: translateX(-100%);
   z-index: 5;
@@ -29,7 +29,7 @@ li {
   padding: 15px;
   overflow: hidden;
   text-align: center;
-  color: #000000;
+  color: var(--text-color);
   font-size: large;
   border-image: linear-gradient(to right, #068fff, #4e4feb) 1;
 }

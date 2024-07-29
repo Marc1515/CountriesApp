@@ -13,6 +13,8 @@ import { CountryCardsComponent } from './components/country-cards/country-cards.
 import { CountryMapComponent } from './components/country-map/country-map.component';
 import { SwitchButtonComponent } from '../shared/components/switch-button/switch-button.component';
 
+import { MatIconModule } from '@angular/material/icon';
+
 @NgModule({
   declarations: [
     ByCapitalPageComponent,
@@ -24,6 +26,6 @@ import { SwitchButtonComponent } from '../shared/components/switch-button/switch
     CountryMapComponent,
     SwitchButtonComponent,
   ],
-  imports: [CommonModule, CountriesRoutingModule, SharedModule],
+  imports: [CommonModule, CountriesRoutingModule, SharedModule, MatIconModule],
 })
 export class CountriesModule {}

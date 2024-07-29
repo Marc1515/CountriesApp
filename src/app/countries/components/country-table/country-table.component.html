@@ -28,7 +28,9 @@
         <td>{{ country.capital }}</td>
         <td>{{ country.population | number }}</td>
         <td>
-          <a [routerLink]="['/countries/by', country.cca3]">Info</a>
+          <a [routerLink]="['/countries/by', country.cca3]">
+            <mat-icon>help_outline</mat-icon></a
+          >
         </td>
       </tr>
     </tbody>

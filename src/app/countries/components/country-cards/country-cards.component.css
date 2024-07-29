@@ -13,7 +13,7 @@
   width: 8rem;
   height: 5rem;
   background-color: var(--secondary-color);
-  border: 3px solid #000;
+  border: 3px solid var(--text-color);
   border-radius: 5px;
   cursor: pointer;
   transition: transform 0.1s;
@@ -42,7 +42,7 @@
     box-sizing: border-box;
     width: 8rem;
     height: 12rem;
-    border: 1px solid #000;
+    border: 1px solid var(--text-color);
     border-radius: 5px;
   }
 
@@ -79,7 +79,7 @@
     box-sizing: border-box;
     width: 14rem;
     height: 16rem;
-    border: 1px solid #000;
+    border: 3px solid var(--text-color);
     border-radius: 5px;
   }
 
