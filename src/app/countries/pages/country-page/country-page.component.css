@@ -1,0 +1,55 @@
+.country-page__container {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding-top: 4rem;
+
+  .country-page__name-container {
+    padding-bottom: 4rem;
+
+    h2 {
+      font-size: xx-large;
+      font-weight: 600;
+    }
+  }
+
+  .country-page__img-container {
+    padding-bottom: 4rem;
+  }
+
+  .country-page__info-container {
+    padding-bottom: 4rem;
+
+    h3 {
+      padding-bottom: 2rem;
+      font-size: x-large;
+      font-weight: 500;
+    }
+
+    .country-page__list {
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 0.5rem;
+
+      .country-page__item-title {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .country-page__map-container {
+    padding-bottom: 4rem;
+    .country-page__map-title {
+      padding-bottom: 2rem;
+    }
+  }
+
+  .country-page__translations-container {
+    padding-bottom: 2rem;
+
+    h3 {
+      padding-bottom: 2rem;
+    }
+  }
+}

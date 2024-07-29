@@ -7,7 +7,7 @@ import { Country } from '../../interfaces/country';
 @Component({
   selector: 'app-country-page',
   templateUrl: './country-page.component.html',
-  styles: [],
+  styleUrls: ['./country-page.component.css'],
 })
 export class CountryPageComponent implements OnInit {
   public country?: Country[];

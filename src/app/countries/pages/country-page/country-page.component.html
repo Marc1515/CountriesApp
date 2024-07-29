@@ -3,7 +3,7 @@
 </ng-template>
 
 <div class="country-page__container" *ngIf="country; else loading">
-  <div class="country-page__name">
+  <div class="country-page__name-container">
     <h2>
       <strong>{{ country[0].name.common }}</strong>
     </h2>
@@ -17,7 +17,7 @@
     />
   </div>
   <div class="country-page__info-container">
-    <h3 class="country-page__info-title">Información</h3>
+    <h3>Información</h3>
     <ul class="country-page__list">
       <li class="country-page__item">
         <span class="country-page__item-title">Población: </span>
@@ -54,7 +54,7 @@
   </div>
 
   <div class="country-page__translations-container">
-    <h3 class="country-page__translations-title">Traducciones</h3>
+    <h3>Traducciones</h3>
     <div class="country-page__translations-wrapper">
       <span class="badge bg-primary m-1">{{
         country[0].translations["ara"].common
