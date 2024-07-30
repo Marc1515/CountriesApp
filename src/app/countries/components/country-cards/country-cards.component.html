@@ -1,8 +1,5 @@
 <div class="cards_container">
-  <div
-    *ngIf="countries.length === 0; else cards"
-    class="alert alert-warning text-center"
-  >
+  <div *ngIf="countries.length === 0; else cards" class="cards__warning">
     <p class="mb-2">There are no countries to show.</p>
     <p>The name of the country or capital should be searched in English.</p>
   </div>

@@ -45,15 +45,23 @@ export class NavbarComponent implements OnInit, OnDestroy {
   onWindowScroll() {
     const navbar = document.querySelector('.navbar') as HTMLElement;
     const navbarList = document.querySelector('.navbar__list') as HTMLElement;
+    const logoContainer = document.querySelector(
+      '.logo-container'
+    ) as HTMLElement;
+    const logoTitle = document.querySelector('.navbar__title') as HTMLElement;
     const buttons = document.querySelectorAll('.navbar__item button');
 
     if (window.pageYOffset > 100) {
       navbar.classList.add('navbar--scrolled');
       navbarList.classList.add('navbar__list--scrolled');
+      logoContainer.classList.add('logo-container--scrolled');
+      logoTitle.classList.add('navbar_title--scrolled');
       buttons.forEach((button) => button.classList.add('button--scrolled'));
     } else {
       navbar.classList.remove('navbar--scrolled');
       navbarList.classList.remove('navbar__list--scrolled');
+      logoContainer.classList.remove('logo-container--scrolled');
+      logoTitle.classList.remove('navbar_title--scrolled');
       buttons.forEach((button) => button.classList.remove('button--scrolled'));
     }
   }

@@ -4,9 +4,7 @@
     <shared-navbar></shared-navbar>
   </div>
 
-  <div *ngIf="!isScreenLarge" class="container__sidebar">
-    <shared-sidebar></shared-sidebar>
-  </div>
+  <shared-sidebar *ngIf="!isScreenLarge"></shared-sidebar>
 
   <!-- Nuestras Páginas -->
   <div class="container__content">
