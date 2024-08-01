@@ -4,7 +4,7 @@
     <span class="navbar__title">Country App</span>
   </a>
 
-  <ul class="navbar__list">
+  <ul *ngIf="!isScreenLarge" class="navbar__list">
     <li class="navbar__item">
       <button
         mat-button
@@ -47,4 +47,8 @@
     </li>
   </ul>
   <div class="navbar__ghost-div"></div>
+  <burguer-button
+    *ngIf="isScreenLarge"
+    class="burguer-button__button"
+  ></burguer-button>
 </nav>

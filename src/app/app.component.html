@@ -1,19 +1,14 @@
 <div class="app__container">
   <!-- Navbar -->
+  <shared-navbar class="app__navbar"></shared-navbar>
 
-  <shared-navbar></shared-navbar>
-
-  <shared-sidebar *ngIf="!isScreenLarge"></shared-sidebar>
+  <!-- Sidebar -->
+  <shared-sidebar class="app_sidebar" *ngIf="!isScreenLarge"></shared-sidebar>
 
   <!-- Nuestras Páginas -->
   <div class="container__content">
     <div class="wrapper__content">
-      <router-outlet class="all-content">
-        <burguer-button
-          *ngIf="!isScreenLarge"
-          class="burguer-button__button"
-        ></burguer-button>
-      </router-outlet>
+      <router-outlet class="all-content"></router-outlet>
     </div>
   </div>
 </div>

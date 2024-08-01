@@ -14,6 +14,8 @@ export class NavbarComponent implements OnInit, OnDestroy {
   private sidebarToggledSubscription!: Subscription;
   private switchToggledSubscription!: Subscription;
 
+  isScreenLarge: boolean = window.innerWidth > 1024;
+
   constructor(private sharedNavbarService: SharedNavbarService) {}
 
   ngOnInit() {
@@ -22,6 +24,9 @@ export class NavbarComponent implements OnInit, OnDestroy {
         this.isSwitchToggled = isToggled;
         console.log('Switch state in Navbar:', this.isSwitchToggled);
       });
+
+    // Inicializa la variable isScreenLarge al iniciar el componente
+    this.updateScreenSize();
   }
 
   sectionClicked() {
@@ -64,5 +69,14 @@ export class NavbarComponent implements OnInit, OnDestroy {
       logoTitle.classList.remove('navbar_title--scrolled');
       buttons.forEach((button) => button.classList.remove('button--scrolled'));
     }
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    this.updateScreenSize();
+  }
+
+  private updateScreenSize() {
+    this.isScreenLarge = window.innerWidth < 1024;
   }
 }
