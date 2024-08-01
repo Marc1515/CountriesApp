@@ -1,5 +1,5 @@
 .sidebar__container {
-  position: absolute;
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,18 +31,7 @@ li {
   text-align: center;
   color: var(--text-color);
   font-size: large;
-  border-image: linear-gradient(to right, #068fff, #4e4feb) 1;
-}
-
-li::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to right, #068fff, #4e4feb);
-  transition: all 1s ease-out;
+  transition: color 0.3s ease-in-out;
 }
 
 li:hover::after {

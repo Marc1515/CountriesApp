@@ -15,7 +15,7 @@
     opacity: 0.95;
   }
 
-  &:hover {
+  /*   &:hover {
     height: 5rem;
     opacity: 1;
   }
@@ -34,7 +34,7 @@
 
   &:hover .navbar__list .navbar__item Button {
     font-weight: bold !important;
-  }
+  } */
 
   .logo-container {
     height: 100%;
@@ -102,5 +102,33 @@
   .navbar__ghost-div {
     height: 100%;
     width: 4rem;
+  }
+
+  .burguer-button__button {
+    padding-right: 1rem;
+  }
+}
+
+/* Estilos específicos para pantallas grandes */
+@media (min-width: 1024px) {
+  .navbar:hover {
+    height: 5rem;
+    opacity: 1;
+  }
+
+  .navbar:hover .logo-container img {
+    width: 5rem;
+  }
+
+  .navbar:hover .logo-container .navbar__title {
+    font-size: 2rem;
+  }
+
+  .navbar:hover .navbar__list {
+    gap: 3rem !important;
+  }
+
+  .navbar:hover .navbar__list .navbar__item button {
+    font-weight: bold !important;
   }
 }
